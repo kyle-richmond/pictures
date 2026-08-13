@@ -4,7 +4,7 @@
 const photos = [
   {
     src: "images/photo1.jpg",
-    caption: "Optional description for photo one.",
+    caption: "",
     alt: "Photo one"
   },
   {
@@ -14,9 +14,64 @@ const photos = [
   },
   {
     src: "images/photo3.jpg",
-    caption: "Optional description for photo three.",
+    caption: "",
     alt: "Photo three"
-  }
+  },
+  {
+    src: "images/photo4.jpg",
+    caption: "",
+    alt: "Photo four"
+  },
+  {
+    src: "images/photo5.jpg",
+    caption: "",
+    alt: "Photo five"
+  },
+  {
+    src: "images/photo6.jpg",
+    caption: "",
+    alt: "Photo six"
+  },
+  {
+    src: "images/photo7.jpg",
+    caption: "",
+    alt: "Photo seven"
+  },
+  {
+    src: "images/photo8.jpg",
+    caption: "",
+    alt: "Photo eight"
+  },
+  {
+    src: "images/photo9.jpg",
+    caption: "",
+    alt: "Photo nine"
+  },
+  {
+    src: "images/photo10.jpg",
+    caption: "",
+    alt: "Photo ten"
+  },
+  {
+    src: "images/photo11.jpg",
+    caption: "",
+    alt: "Photo eleven"
+  },
+  {
+    src: "images/photo12.jpg",
+    caption: "",
+    alt: "Photo twelve"
+  },
+  {
+    src: "images/photo13.jpg",
+    caption: "",
+    alt: "Photo thirteen"
+  },
+  {
+    src: "images/photo14.jpg",
+    caption: "",
+    alt: "Photo fourteen"
+  },
 ];
 
 const image = document.getElementById("carouselImage");
