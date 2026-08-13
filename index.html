@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A minimal photo carousel." />
+  <title>Photo Carousel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="carousel" aria-label="Photo carousel">
+      <div class="image-stage" id="imageStage">
+        <button class="nav-button nav-button--left" id="prevButton" type="button" aria-label="Previous photo">
+          <span aria-hidden="true">‹</span>
+        </button>
+
+        <img id="carouselImage" class="carousel-image" src="" alt="" draggable="false" />
+
+        <button class="nav-button nav-button--right" id="nextButton" type="button" aria-label="Next photo">
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+
+      <div class="carousel-meta">
+        <p class="caption" id="caption"></p>
+        <p class="counter" id="counter" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

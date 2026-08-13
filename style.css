@@ -1,0 +1,204 @@
+:root {
+  --background: #f5f3ef;
+  --text: #171717;
+  --muted: #6f6b64;
+  --button-bg: rgba(245, 243, 239, 0.72);
+  --button-bg-hover: rgba(245, 243, 239, 0.94);
+  --max-width: 1400px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page-shell {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+.carousel {
+  width: min(100%, var(--max-width));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-stage {
+  position: relative;
+  width: 100%;
+  height: min(78vh, 900px);
+  height: min(78svh, 900px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.carousel-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 160ms ease;
+}
+
+.carousel-image.is-changing {
+  opacity: 0;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: var(--button-bg);
+  color: var(--text);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 140ms ease, background 140ms ease, transform 140ms ease;
+}
+
+.image-stage:hover .nav-button,
+.nav-button:focus-visible {
+  opacity: 1;
+}
+
+.nav-button:hover {
+  background: var(--button-bg-hover);
+}
+
+.nav-button:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.nav-button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+.nav-button span {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1;
+  transform: translateY(-2px);
+}
+
+.nav-button--left {
+  left: 14px;
+}
+
+.nav-button--right {
+  right: 14px;
+}
+
+.carousel-meta {
+  width: 100%;
+  min-height: 64px;
+  padding-top: 18px;
+  text-align: center;
+}
+
+.caption {
+  max-width: 760px;
+  margin: 0 auto;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.caption:empty {
+  display: none;
+}
+
+.counter {
+  margin: 11px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (hover: none) {
+  .nav-button {
+    opacity: 0.72;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-shell {
+    padding: 14px;
+  }
+
+  .image-stage {
+    height: 76vh;
+    height: 76svh;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 54px;
+  }
+
+  .nav-button--left {
+    left: 6px;
+  }
+
+  .nav-button--right {
+    right: 6px;
+  }
+
+  .nav-button span {
+    font-size: 38px;
+  }
+
+  .carousel-meta {
+    padding-top: 14px;
+  }
+
+  .caption {
+    padding: 0 12px;
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-image,
+  .nav-button {
+    transition: none;
+  }
+}
