@@ -71,7 +71,7 @@ const photos = [
     src: "images/photo14.jpg",
     caption: "",
     alt: "Photo fourteen"
-  },
+  }
 ];
 
 const image = document.getElementById("carouselImage");
